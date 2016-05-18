@@ -12,9 +12,13 @@
 		430035E61CECEE8100321132 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430035E41CECEE8100321132 /* Main.storyboard */; };
 		430035E81CECEE8100321132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430035E71CECEE8100321132 /* Assets.xcassets */; };
 		430035EB1CECEE8100321132 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430035E91CECEE8100321132 /* LaunchScreen.storyboard */; };
+		430035F31CECEF1300321132 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430035F21CECEF1300321132 /* LoginManager.swift */; };
+		430035F51CECF0A600321132 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430035F41CECF0A600321132 /* UserInfoManager.swift */; };
+		6C8BA35917A18E03FD0C36C3 /* Pods_ApartmentMGR_Homework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1795CCF95ABC19B2ECE8144B /* Pods_ApartmentMGR_Homework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1795CCF95ABC19B2ECE8144B /* Pods_ApartmentMGR_Homework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApartmentMGR_Homework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		430035DD1CECEE8100321132 /* ApartmentMGR-Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ApartmentMGR-Homework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		430035E01CECEE8100321132 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		430035E21CECEE8100321132 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,10 @@
 		430035E71CECEE8100321132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430035EA1CECEE8100321132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430035EC1CECEE8100321132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		430035F21CECEF1300321132 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		430035F41CECF0A600321132 /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
+		F0A0E377B334BA6E3D999F4E /* Pods-ApartmentMGR-Homework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApartmentMGR-Homework.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApartmentMGR-Homework/Pods-ApartmentMGR-Homework.release.xcconfig"; sourceTree = "<group>"; };
+		F5C328DFD905D1DB4849CE97 /* Pods-ApartmentMGR-Homework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApartmentMGR-Homework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApartmentMGR-Homework/Pods-ApartmentMGR-Homework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C8BA35917A18E03FD0C36C3 /* Pods_ApartmentMGR_Homework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2397608C0B295F04B3D0B717 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5C328DFD905D1DB4849CE97 /* Pods-ApartmentMGR-Homework.debug.xcconfig */,
+				F0A0E377B334BA6E3D999F4E /* Pods-ApartmentMGR-Homework.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		430035D41CECEE8100321132 = {
 			isa = PBXGroup;
 			children = (
 				430035DF1CECEE8100321132 /* ApartmentMGR-Homework */,
 				430035DE1CECEE8100321132 /* Products */,
+				2397608C0B295F04B3D0B717 /* Pods */,
+				CD64B874DBA42C570E804543 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +76,22 @@
 			children = (
 				430035E01CECEE8100321132 /* AppDelegate.swift */,
 				430035E21CECEE8100321132 /* ViewController.swift */,
+				430035F21CECEF1300321132 /* LoginManager.swift */,
+				430035F41CECF0A600321132 /* UserInfoManager.swift */,
 				430035E41CECEE8100321132 /* Main.storyboard */,
 				430035E71CECEE8100321132 /* Assets.xcassets */,
 				430035E91CECEE8100321132 /* LaunchScreen.storyboard */,
 				430035EC1CECEE8100321132 /* Info.plist */,
 			);
 			path = "ApartmentMGR-Homework";
+			sourceTree = "<group>";
+		};
+		CD64B874DBA42C570E804543 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1795CCF95ABC19B2ECE8144B /* Pods_ApartmentMGR_Homework.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 430035EF1CECEE8100321132 /* Build configuration list for PBXNativeTarget "ApartmentMGR-Homework" */;
 			buildPhases = (
+				FC3DCF21C5A89E1290E2EF1B /* 📦 Check Pods Manifest.lock */,
 				430035D91CECEE8100321132 /* Sources */,
 				430035DA1CECEE8100321132 /* Frameworks */,
 				430035DB1CECEE8100321132 /* Resources */,
+				0CD3DD8A42AD2778F407A3D8 /* 📦 Embed Pods Frameworks */,
+				63DCFEBCCAD8D8D437002A5A /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +164,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CD3DD8A42AD2778F407A3D8 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ApartmentMGR-Homework/Pods-ApartmentMGR-Homework-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63DCFEBCCAD8D8D437002A5A /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ApartmentMGR-Homework/Pods-ApartmentMGR-Homework-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC3DCF21C5A89E1290E2EF1B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		430035D91CECEE8100321132 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -138,6 +219,8 @@
 			files = (
 				430035E31CECEE8100321132 /* ViewController.swift in Sources */,
 				430035E11CECEE8100321132 /* AppDelegate.swift in Sources */,
+				430035F51CECF0A600321132 /* UserInfoManager.swift in Sources */,
+				430035F31CECEF1300321132 /* LoginManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +333,7 @@
 		};
 		430035F01CECEE8100321132 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5C328DFD905D1DB4849CE97 /* Pods-ApartmentMGR-Homework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ApartmentMGR-Homework/Info.plist";
@@ -261,6 +345,7 @@
 		};
 		430035F11CECEE8100321132 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0A0E377B334BA6E3D999F4E /* Pods-ApartmentMGR-Homework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ApartmentMGR-Homework/Info.plist";
@@ -289,6 +374,7 @@
 				430035F11CECEE8100321132 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
