@@ -15,16 +15,12 @@ class LoginManager: NSObject {
     var currentuser = BackendlessUser()
     var userInfoManager = UserInfoManager.sharedInstance
     
-
-    
-    
     func signUpNewUser(email: String, password: String) {
         let user = BackendlessUser()
         user.email = email
         user.password = password
         backendless.userService.registering(user, response: { (registeredUser) in
             print("Success Registering \(registeredUser.email)")
-            self.userInfoManager.setUserInfo(registeredUser.email, ownerId: registeredUser.objectId)
         }) { (error) in
             print("error registering \(error)")
         }
@@ -34,9 +30,12 @@ class LoginManager: NSObject {
         backendless.userService.login(email, password: password, response: { (loggedInUser) in
             print("Logged In \(loggedInUser.email)")
             self.currentuser = loggedInUser
+            self.userInfoManager.setUserInfo(self.currentuser.email, ownerId: self.currentuser.objectId)
+            NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "recvLoginInfo", object: nil))
         }) { (error) in
             print("LogIn Error: \(error)")
         }
+        
     }
     
     

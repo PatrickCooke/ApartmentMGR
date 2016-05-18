@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         loginManager.signUpNewUser(email, password: password)
         blankFields()
     }
-    
+
     @IBAction private func loginUser(button: UIButton) {
         guard let email = emailTextField.text else {
             return
@@ -43,19 +43,31 @@ class ViewController: UIViewController {
         blankFields()
     }
     
+    func segueToViews() {
+        switch self.userInfoManager.userEmail {
+        case "cookepa1@gmail.com":
+            print("Email: \(self.userInfoManager.userEmail), UserID: \(self.userInfoManager.userID)")
+            print("admin has signed in")
+            
+        default:
+            print("Email: \(self.userInfoManager.userEmail), UserID: \(self.userInfoManager.userID)")
+            print("any other user  has signed in")
+            
+        }
+    }
+    
+    
     //MARK: - Basic Validation Functions
     
     @IBAction private func textFieldChanged() {
         signupButton.enabled = false
         loginButton.enabled = false
-        
         guard let email = emailTextField.text else {
             return
         }
         guard let password = passwordTextField.text else {
             return
         }
-        
         if isValidLogin(email, password: password) {
             signupButton.enabled = true
             loginButton.enabled = true
@@ -63,7 +75,7 @@ class ViewController: UIViewController {
     }
     
     private func isValidLogin (email: String, password: String) -> Bool {
-        return email.characters.count > 5 && password.characters.count > 4
+        return email.characters.count > 5 && email.characters.contains("@") && password.characters.count > 4
     }
     
     private func blankFields() {
@@ -77,6 +89,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textFieldChanged()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(segueToViews), name: "recvLoginInfo", object: nil)
     }
     
     override func didReceiveMemoryWarning() {
