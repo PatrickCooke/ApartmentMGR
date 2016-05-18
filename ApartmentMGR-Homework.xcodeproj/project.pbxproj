@@ -14,6 +14,11 @@
 		430035EB1CECEE8100321132 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430035E91CECEE8100321132 /* LaunchScreen.storyboard */; };
 		430035F31CECEF1300321132 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430035F21CECEF1300321132 /* LoginManager.swift */; };
 		430035F51CECF0A600321132 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430035F41CECF0A600321132 /* UserInfoManager.swift */; };
+		430035F71CECFF2F00321132 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430035F61CECFF2F00321132 /* AdminViewController.swift */; };
+		430035F91CECFF3E00321132 /* ResidentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430035F81CECFF3E00321132 /* ResidentViewController.swift */; };
+		430036001CED027D00321132 /* FixitObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430035FF1CED027D00321132 /* FixitObjects.swift */; };
+		430036021CED082400321132 /* ReqAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430036011CED082400321132 /* ReqAddViewController.swift */; };
+		430036041CED0F9800321132 /* FixitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430036031CED0F9800321132 /* FixitTableViewCell.swift */; };
 		6C8BA35917A18E03FD0C36C3 /* Pods_ApartmentMGR_Homework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1795CCF95ABC19B2ECE8144B /* Pods_ApartmentMGR_Homework.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +33,11 @@
 		430035EC1CECEE8100321132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		430035F21CECEF1300321132 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		430035F41CECF0A600321132 /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
+		430035F61CECFF2F00321132 /* AdminViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		430035F81CECFF3E00321132 /* ResidentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResidentViewController.swift; sourceTree = "<group>"; };
+		430035FF1CED027D00321132 /* FixitObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixitObjects.swift; sourceTree = "<group>"; };
+		430036011CED082400321132 /* ReqAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReqAddViewController.swift; sourceTree = "<group>"; };
+		430036031CED0F9800321132 /* FixitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixitTableViewCell.swift; sourceTree = "<group>"; };
 		F0A0E377B334BA6E3D999F4E /* Pods-ApartmentMGR-Homework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApartmentMGR-Homework.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApartmentMGR-Homework/Pods-ApartmentMGR-Homework.release.xcconfig"; sourceTree = "<group>"; };
 		F5C328DFD905D1DB4849CE97 /* Pods-ApartmentMGR-Homework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApartmentMGR-Homework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApartmentMGR-Homework/Pods-ApartmentMGR-Homework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,14 +86,27 @@
 			children = (
 				430035E01CECEE8100321132 /* AppDelegate.swift */,
 				430035E21CECEE8100321132 /* ViewController.swift */,
+				430035F61CECFF2F00321132 /* AdminViewController.swift */,
+				430035F81CECFF3E00321132 /* ResidentViewController.swift */,
+				430036011CED082400321132 /* ReqAddViewController.swift */,
+				430036031CED0F9800321132 /* FixitTableViewCell.swift */,
+				430035E41CECEE8100321132 /* Main.storyboard */,
+				430035FC1CED014700321132 /* Model */,
 				430035F21CECEF1300321132 /* LoginManager.swift */,
 				430035F41CECF0A600321132 /* UserInfoManager.swift */,
-				430035E41CECEE8100321132 /* Main.storyboard */,
 				430035E71CECEE8100321132 /* Assets.xcassets */,
 				430035E91CECEE8100321132 /* LaunchScreen.storyboard */,
 				430035EC1CECEE8100321132 /* Info.plist */,
 			);
 			path = "ApartmentMGR-Homework";
+			sourceTree = "<group>";
+		};
+		430035FC1CED014700321132 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				430035FF1CED027D00321132 /* FixitObjects.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		CD64B874DBA42C570E804543 /* Frameworks */ = {
@@ -217,9 +240,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430035F91CECFF3E00321132 /* ResidentViewController.swift in Sources */,
+				430036041CED0F9800321132 /* FixitTableViewCell.swift in Sources */,
 				430035E31CECEE8100321132 /* ViewController.swift in Sources */,
 				430035E11CECEE8100321132 /* AppDelegate.swift in Sources */,
 				430035F51CECF0A600321132 /* UserInfoManager.swift in Sources */,
+				430035F71CECFF2F00321132 /* AdminViewController.swift in Sources */,
+				430036021CED082400321132 /* ReqAddViewController.swift in Sources */,
+				430036001CED027D00321132 /* FixitObjects.swift in Sources */,
 				430035F31CECEF1300321132 /* LoginManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -47,11 +47,14 @@ class ViewController: UIViewController {
         switch self.userInfoManager.userEmail {
         case "cookepa1@gmail.com":
             print("Email: \(self.userInfoManager.userEmail), UserID: \(self.userInfoManager.userID)")
+            print("currentuser email: \(currentuser.email), ID: \(currentuser.objectId)")
             print("admin has signed in")
-            
+            performSegueWithIdentifier("admin", sender: currentuser)
         default:
             print("Email: \(self.userInfoManager.userEmail), UserID: \(self.userInfoManager.userID)")
+            print("currentuser email: \(currentuser.email), ID: \(currentuser.objectId)")
             print("any other user  has signed in")
+            performSegueWithIdentifier("resident", sender: currentuser)
             
         }
     }
